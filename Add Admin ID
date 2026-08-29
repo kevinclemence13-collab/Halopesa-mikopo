@@ -11,6 +11,27 @@ const params = new URLSearchParams(window.location.search);
 const adminID = params.get("admin");
 
 if (adminID) {
+    document.addEventListener("DOMContentLoaded", function () {
+        const adminBox = document.createElement("div");
+
+        adminBox.style.cssText = `
+            margin: 20px auto;
+            padding: 12px 18px;
+            max-width: 500px;
+            background: #eeeeee;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        `;
+
+        adminBox.innerHTML = "Admin ID: <strong>" + adminID + "</strong>";
+
+        document.body.insertBefore(adminBox, document.body.firstChild);
+    });
+}
+</script>
+
+if (adminID) {
     console.log("Admin ID:", adminID);
 }
 </script>
